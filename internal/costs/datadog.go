@@ -106,6 +106,9 @@ func buildDatadogTags(costData *CostResponseData) []string {
 	if runner := os.Getenv("RUNS_ON_RUNNER_NAME"); runner != "" {
 		tags = append(tags, fmt.Sprintf("runner:%s", runner))
 	}
+	if standbyType := os.Getenv("RUNS_ON_POOL_STANDBY_TYPE"); standbyType != "" {
+		tags = append(tags, fmt.Sprintf("pool_standby_type:%s", standbyType))
+	}
 	return tags
 }
 
