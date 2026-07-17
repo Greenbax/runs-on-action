@@ -155,7 +155,6 @@ func PushCostMetricsToDatadog(action *githubactions.Action, cfg *config.Config, 
 		{"ci.runs_on.job_duration_minutes", costData.DurationMinutes, "minute"},
 		{"ci.runs_on.github_equivalent_cost_usd", costData.Github.TotalCost, "usd"},
 		{"ci.runs_on.savings_usd", costData.Savings.Amount, "usd"},
-		{"ci.runs_on.savings_percentage", costData.Savings.Percentage, "percent"},
 	}
 
 	series := make([]datadogSeries, 0, len(metrics))
