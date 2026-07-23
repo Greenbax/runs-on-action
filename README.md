@@ -94,7 +94,8 @@ Possible values:
 * `disk` - Disk metrics (`used_percent`, `inodes_used`)
 * `io` - I/O metrics (`io_time`, `reads`, `writes`)
 * Comma-separated combinations (e.g., `cpu,network,memory,disk,io`)
-* Empty string - No additional metrics (default)
+* Empty string - No additional metrics
+* Defaults to `disk`
 
 The action will display live metrics with charts in the post-execution summary.
 

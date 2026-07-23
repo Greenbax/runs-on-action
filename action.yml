@@ -17,7 +17,7 @@ inputs:
   metrics:
     description: 'Comma separated list of additional metrics to send to CloudWatch (cpu, network, memory, disk, io)'
     required: false
-    default: ''
+    default: 'disk'
   network_interface:
     description: 'Network interface to monitor'
     required: false
